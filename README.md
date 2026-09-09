@@ -54,3 +54,19 @@ python3 -m http.server 8000
 - **Envio real dos formulários:** hoje `enviarFormulario()` em `js/main.js` apenas exibe a
   confirmação e limpa o formulário; substitua pela chamada ao seu backend
   (há um exemplo com `fetch` comentado no próprio arquivo)
+
+## Publicação no GitHub Pages
+
+O repositório traz o workflow `.github/workflows/deploy-pages.yml`, que publica o
+conteúdo da raiz a cada push. Falta apenas um passo manual, feito uma única vez:
+
+1. No GitHub, abra **Settings → Pages**.
+2. Em **Build and deployment → Source**, escolha **GitHub Actions**.
+
+A partir daí cada push dispara a publicação, e a URL do site aparece na aba
+**Actions**, no resumo da execução (algo como
+`https://n8nexpertdigital.github.io/Dentistas---Gemini/`).
+
+> O GitHub costuma permitir a publicação apenas a partir do branch padrão. Se a
+> execução falhar com erro de *environment protection rules*, leve os arquivos
+> para a `main` ou libere o branch em **Settings → Environments → github-pages**.
