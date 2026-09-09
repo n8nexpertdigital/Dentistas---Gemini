@@ -1,7 +1,4 @@
 # Publica o site estático no GitHub Pages.
-#
-# Passo manual necessário uma única vez:
-# Settings → Pages → Build and deployment → Source: "GitHub Actions".
 name: Deploy no GitHub Pages
 
 on:
@@ -33,6 +30,9 @@ jobs:
 
       - name: Configurar o Pages
         uses: actions/configure-pages@v5
+        with:
+          # Liga o Pages na primeira execução, dispensando configurar na mão.
+          enablement: true
 
       - name: Empacotar o site
         uses: actions/upload-pages-artifact@v3

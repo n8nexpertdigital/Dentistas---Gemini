@@ -57,15 +57,13 @@ python3 -m http.server 8000
 
 ## Publicação no GitHub Pages
 
-O repositório traz o workflow `.github/workflows/deploy-pages.yml`, que publica o
-conteúdo da raiz a cada push. Falta apenas um passo manual, feito uma única vez:
+O workflow `.github/workflows/deploy-pages.yml` publica o conteúdo da raiz a cada
+push (e sob demanda, pela aba **Actions** → *Run workflow*). Ele usa
+`enablement: true`, então liga o GitHub Pages sozinho na primeira execução — não é
+preciso configurar nada em Settings.
 
-1. No GitHub, abra **Settings → Pages**.
-2. Em **Build and deployment → Source**, escolha **GitHub Actions**.
-
-A partir daí cada push dispara a publicação, e a URL do site aparece na aba
-**Actions**, no resumo da execução (algo como
-`https://n8nexpertdigital.github.io/Dentistas---Gemini/`).
+A URL do site aparece no resumo da execução, na aba **Actions**, e em
+**Settings → Pages** (algo como `https://n8nexpertdigital.github.io/Dentistas---Gemini/`).
 
 > O GitHub costuma permitir a publicação apenas a partir do branch padrão. Se a
 > execução falhar com erro de *environment protection rules*, leve os arquivos
