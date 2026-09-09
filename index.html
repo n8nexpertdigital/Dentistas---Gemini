@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ProtegeMais Seguros — Proteção simples para o que importa</title>
+  <meta name="description" content="Seguros de auto, residencial, vida, viagem e empresarial com cotação online em poucos minutos e atendimento humano 24 horas." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="container cabecalho__interno">
+      <a class="logo" href="index.html">
+        <span class="logo__marca">◈</span> <span>Protege<strong>Mais</strong> Seguros</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">☰</button>
+
+      <nav class="menu" id="menu-principal">
+        <a href="index.html" class="ativo">Início</a>
+        <a href="index.html#seguros">Seguros</a>
+        <a href="index.html#como-funciona">Como funciona</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+        <a href="#cotacao" class="botao botao--primario">Fazer cotação</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__grade">
+        <div>
+          <h1>Proteção simples para o que realmente importa</h1>
+          <p class="hero__texto">
+            Compare coberturas, contrate online em poucos minutos e conte com atendimento
+            humano 24 horas por dia, todos os dias do ano.
+          </p>
+          <div class="hero__acoes">
+            <a href="#cotacao" class="botao botao--primario">Fazer cotação gratuita</a>
+            <a href="#seguros" class="botao botao--secundario">Conhecer os seguros</a>
+          </div>
+          <div class="hero__selos">
+            <div class="hero__selo"><strong>+180 mil</strong><span>clientes protegidos</span></div>
+            <div class="hero__selo"><strong>24h</strong><span>assistência e sinistro</span></div>
+            <div class="hero__selo"><strong>4,8/5</strong><span>satisfação dos clientes</span></div>
+          </div>
+        </div>
+
+        <!-- Cotação rápida -->
+        <div class="card-cotacao" id="cotacao">
+          <h2>Cotação em 2 minutos</h2>
+          <p>Preencha os dados e um consultor entra em contato com a melhor proposta.</p>
+
+          <div class="aviso aviso--ok" id="aviso-cotacao" role="status" aria-live="polite">
+            Cotação enviada! Nossa equipe entra em contato em até 1 dia útil.
+          </div>
+
+          <form id="form-cotacao" novalidate>
+            <div class="campo">
+              <label for="cot-nome">Nome completo</label>
+              <input type="text" id="cot-nome" name="nome" autocomplete="name" required />
+              <span class="campo__erro">Informe seu nome completo.</span>
+            </div>
+
+            <div class="campo">
+              <label for="cot-email">E-mail</label>
+              <input type="email" id="cot-email" name="email" autocomplete="email" required />
+              <span class="campo__erro">Informe um e-mail válido.</span>
+            </div>
+
+            <div class="campo">
+              <label for="cot-telefone">Telefone / WhatsApp</label>
+              <input type="tel" id="cot-telefone" name="telefone" inputmode="tel" autocomplete="tel" placeholder="(11) 99999-0000" required />
+              <span class="campo__erro">Informe um telefone com DDD.</span>
+            </div>
+
+            <div class="campo">
+              <label for="cot-tipo">Tipo de seguro</label>
+              <select id="cot-tipo" name="tipo" required>
+                <option value="">Selecione…</option>
+                <option value="auto">Auto</option>
+                <option value="residencial">Residencial</option>
+                <option value="vida">Vida</option>
+                <option value="viagem">Viagem</option>
+                <option value="empresarial">Empresarial</option>
+              </select>
+              <span class="campo__erro">Escolha o tipo de seguro.</span>
+            </div>
+
+            <div class="campo campo--checkbox">
+              <input type="checkbox" id="cot-aceite" name="aceite" required />
+              <label for="cot-aceite">Autorizo o contato e o uso dos meus dados para envio da cotação.</label>
+            </div>
+            <span class="campo__erro" id="erro-aceite">É necessário aceitar para continuar.</span>
+
+            <button type="submit" class="botao botao--solido botao--bloco">Quero minha cotação</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seguros -->
+    <section class="secao" id="seguros">
+      <div class="container">
+        <div class="secao__titulo">
+          <h2>Um seguro para cada momento</h2>
+          <p>Coberturas que você monta do seu jeito, sem pagar por aquilo que não vai usar.</p>
+        </div>
+
+        <div class="grade grade--3">
+          <article class="card">
+            <div class="card__icone" aria-hidden="true">🚗</div>
+            <h3>Seguro Auto</h3>
+            <ul class="card__lista">
+              <li>Colisão, roubo e furto</li>
+              <li>Carro reserva por até 30 dias</li>
+              <li>Guincho ilimitado na região</li>
+            </ul>
+            <a class="card__link" href="contato.html?seguro=auto">Cotar seguro auto →</a>
+          </article>
+
+          <article class="card">
+            <div class="card__icone" aria-hidden="true">🏠</div>
+            <h3>Seguro Residencial</h3>
+            <ul class="card__lista">
+              <li>Incêndio, raio e explosão</li>
+              <li>Danos elétricos e vendaval</li>
+              <li>Chaveiro, encanador e eletricista</li>
+            </ul>
+            <a class="card__link" href="contato.html?seguro=residencial">Cotar residencial →</a>
+          </article>
+
+          <article class="card">
+            <div class="card__icone" aria-hidden="true">❤️</div>
+            <h3>Seguro de Vida</h3>
+            <ul class="card__lista">
+              <li>Capital segurado a partir de R$ 50 mil</li>
+              <li>Invalidez por acidente</li>
+              <li>Assistência funeral familiar</li>
+            </ul>
+            <a class="card__link" href="contato.html?seguro=vida">Cotar seguro de vida →</a>
+          </article>
+
+          <article class="card">
+            <div class="card__icone" aria-hidden="true">✈️</div>
+            <h3>Seguro Viagem</h3>
+            <ul class="card__lista">
+              <li>Despesas médicas no exterior</li>
+              <li>Extravio e atraso de bagagem</li>
+              <li>Cancelamento de viagem</li>
+            </ul>
+            <a class="card__link" href="contato.html?seguro=viagem">Cotar seguro viagem →</a>
+          </article>
+
+          <article class="card">
+            <div class="card__icone" aria-hidden="true">🏢</div>
+            <h3>Seguro Empresarial</h3>
+            <ul class="card__lista">
+              <li>Patrimônio e equipamentos</li>
+              <li>Responsabilidade civil</li>
+              <li>Lucros cessantes</li>
+            </ul>
+            <a class="card__link" href="contato.html?seguro=empresarial">Cotar empresarial →</a>
+          </article>
+
+          <article class="card">
+            <div class="card__icone" aria-hidden="true">📱</div>
+            <h3>Seguro Portáteis</h3>
+            <ul class="card__lista">
+              <li>Celular, notebook e tablet</li>
+              <li>Quebra acidental e roubo</li>
+              <li>Cobertura dentro e fora do Brasil</li>
+            </ul>
+            <a class="card__link" href="contato.html?seguro=portateis">Cotar portáteis →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="secao secao--clara">
+      <div class="container">
+        <div class="secao__titulo">
+          <h2>Por que escolher a ProtegeMais</h2>
+          <p>Menos letra miúda, mais gente disponível quando você precisa.</p>
+        </div>
+
+        <div class="grade grade--4">
+          <div class="card">
+            <div class="card__icone" aria-hidden="true">⚡</div>
+            <h3>Cotação rápida</h3>
+            <p>Você recebe até 5 propostas de seguradoras parceiras em um único lugar.</p>
+          </div>
+          <div class="card">
+            <div class="card__icone" aria-hidden="true">🕑</div>
+            <h3>Atendimento 24h</h3>
+            <p>Central de sinistros e assistência aberta todos os dias, inclusive feriados.</p>
+          </div>
+          <div class="card">
+            <div class="card__icone" aria-hidden="true">📄</div>
+            <h3>Contrato claro</h3>
+            <p>Coberturas, carências e franquias explicadas em linguagem simples.</p>
+          </div>
+          <div class="card">
+            <div class="card__icone" aria-hidden="true">🤝</div>
+            <h3>Consultor dedicado</h3>
+            <p>Um especialista acompanha sua apólice da contratação à renovação.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Como funciona -->
+    <section class="secao secao--azul" id="como-funciona">
+      <div class="container">
+        <div class="secao__titulo">
+          <h2>Como funciona</h2>
+          <p>Três passos entre o pedido de cotação e a apólice na sua mão.</p>
+        </div>
+
+        <div class="grade grade--3">
+          <div class="passo">
+            <div class="passo__numero">1</div>
+            <h3>Conte o que quer proteger</h3>
+            <p>Preencha o formulário com os dados básicos do bem ou da pessoa a segurar.</p>
+          </div>
+          <div class="passo">
+            <div class="passo__numero">2</div>
+            <h3>Compare as propostas</h3>
+            <p>Enviamos as opções das seguradoras parceiras com preço e cobertura lado a lado.</p>
+          </div>
+          <div class="passo">
+            <div class="passo__numero">3</div>
+            <h3>Contrate e relaxe</h3>
+            <p>Assinatura digital, apólice por e-mail e assistência disponível desde o primeiro dia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="secao">
+      <div class="container">
+        <div class="secao__titulo">
+          <h2>Quem já está protegido</h2>
+          <p>Histórias de clientes que acionaram o seguro e foram atendidos.</p>
+        </div>
+
+        <div class="grade grade--3">
+          <article class="card depoimento">
+            <blockquote>“Bati o carro num sábado à noite. O guincho chegou em 40 minutos e o carro reserva estava comigo na segunda.”</blockquote>
+            <footer><strong>Marina Alves</strong>Seguro Auto · Campinas/SP</footer>
+          </article>
+          <article class="card depoimento">
+            <blockquote>“Um temporal derrubou parte do telhado. O reembolso saiu em nove dias, sem burocracia nenhuma.”</blockquote>
+            <footer><strong>Ricardo Menezes</strong>Seguro Residencial · Curitiba/PR</footer>
+          </article>
+          <article class="card depoimento">
+            <blockquote>“Fui atendida por um médico em Lisboa e não paguei nada. O suporte respondeu no WhatsApp em minutos.”</blockquote>
+            <footer><strong>Juliana Prado</strong>Seguro Viagem · Recife/PE</footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="secao secao--clara">
+      <div class="container">
+        <div class="secao__titulo">
+          <h2>Perguntas frequentes</h2>
+          <p>As dúvidas que mais chegam à nossa central de atendimento.</p>
+        </div>
+
+        <div class="faq">
+          <details open>
+            <summary>A cotação tem algum custo?</summary>
+            <p>Não. A cotação é gratuita e sem compromisso — você só paga se decidir contratar a apólice.</p>
+          </details>
+          <details>
+            <summary>Em quanto tempo recebo as propostas?</summary>
+            <p>Para auto, residencial e viagem, o retorno costuma sair no mesmo dia útil. Seguros empresariais podem levar até 3 dias úteis por exigirem análise de risco.</p>
+          </details>
+          <details>
+            <summary>Como aciono o seguro em caso de sinistro?</summary>
+            <p>Pela central 0800 000 0000, disponível 24 horas, ou pelo WhatsApp. Você recebe o número do aviso de sinistro na hora e acompanha o andamento por e-mail.</p>
+          </details>
+          <details>
+            <summary>Posso cancelar a apólice depois de contratar?</summary>
+            <p>Pode. Nos primeiros 7 dias o cancelamento é integral. Depois desse prazo, a devolução é proporcional ao período não utilizado, conforme as regras da seguradora.</p>
+          </details>
+          <details>
+            <summary>Vocês atendem em todo o Brasil?</summary>
+            <p>Sim. Trabalhamos com seguradoras de abrangência nacional; algumas assistências, como guincho ilimitado, variam conforme a região.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chamada final -->
+    <section class="chamada">
+      <div class="container">
+        <h2>Pronto para se proteger?</h2>
+        <p>Leva dois minutos para pedir sua cotação — e você decide com calma, sem pressão de vendedor.</p>
+        <a href="#cotacao" class="botao botao--primario">Fazer cotação gratuita</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape__grade">
+        <div>
+          <span class="rodape__logo">◈ ProtegeMais Seguros</span>
+          <p>Corretora de seguros com atendimento digital e consultor dedicado para cada cliente.</p>
+        </div>
+        <div>
+          <h3>Seguros</h3>
+          <ul>
+            <li><a href="index.html#seguros">Auto</a></li>
+            <li><a href="index.html#seguros">Residencial</a></li>
+            <li><a href="index.html#seguros">Vida</a></li>
+            <li><a href="index.html#seguros">Viagem</a></li>
+            <li><a href="index.html#seguros">Empresarial</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Institucional</h3>
+          <ul>
+            <li><a href="sobre.html">Sobre nós</a></li>
+            <li><a href="index.html#como-funciona">Como funciona</a></li>
+            <li><a href="contato.html">Fale conosco</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Atendimento</h3>
+          <ul>
+            <li>0800 000 0000</li>
+            <li><a href="mailto:contato@protegemais.exemplo">contato@protegemais.exemplo</a></li>
+            <li>Seg. a sex., 8h às 20h</li>
+            <li>Sinistros: 24 horas</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rodape__base">
+        <span>© <span id="ano">2026</span> ProtegeMais Seguros. Site de demonstração — empresa fictícia.</span>
+        <span>Dados, telefones e números citados são ilustrativos.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

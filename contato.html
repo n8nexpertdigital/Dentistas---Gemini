@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato — ProtegeMais Seguros</title>
+  <meta name="description" content="Fale com a ProtegeMais Seguros: telefone, e-mail, WhatsApp, endereço e formulário de atendimento." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="container cabecalho__interno">
+      <a class="logo" href="index.html">
+        <span class="logo__marca">◈</span> <span>Protege<strong>Mais</strong> Seguros</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">☰</button>
+
+      <nav class="menu" id="menu-principal">
+        <a href="index.html">Início</a>
+        <a href="index.html#seguros">Seguros</a>
+        <a href="index.html#como-funciona">Como funciona</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html" class="ativo">Contato</a>
+        <a href="index.html#cotacao" class="botao botao--primario">Fazer cotação</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="pagina-topo">
+      <div class="container">
+        <h1>Fale com a gente</h1>
+        <p>Dúvida sobre cobertura, aviso de sinistro ou segunda via de apólice — escolha o canal que preferir.</p>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="container duas-colunas">
+
+        <div>
+          <h2>Envie uma mensagem</h2>
+          <p>Respondemos em até 1 dia útil. Para sinistros em andamento, prefira o telefone 24 horas.</p>
+
+          <div class="aviso aviso--ok" id="aviso-contato" role="status" aria-live="polite">
+            Mensagem enviada com sucesso! Em breve entraremos em contato.
+          </div>
+
+          <form id="form-contato" novalidate>
+            <div class="form-grade">
+              <div class="campo">
+                <label for="ct-nome">Nome completo</label>
+                <input type="text" id="ct-nome" name="nome" autocomplete="name" required />
+                <span class="campo__erro">Informe seu nome completo.</span>
+              </div>
+
+              <div class="campo">
+                <label for="ct-email">E-mail</label>
+                <input type="email" id="ct-email" name="email" autocomplete="email" required />
+                <span class="campo__erro">Informe um e-mail válido.</span>
+              </div>
+
+              <div class="campo">
+                <label for="ct-telefone">Telefone / WhatsApp</label>
+                <input type="tel" id="ct-telefone" name="telefone" inputmode="tel" autocomplete="tel" placeholder="(11) 99999-0000" required />
+                <span class="campo__erro">Informe um telefone com DDD.</span>
+              </div>
+
+              <div class="campo">
+                <label for="ct-assunto">Assunto</label>
+                <select id="ct-assunto" name="assunto" required>
+                  <option value="">Selecione…</option>
+                  <option value="cotacao">Quero uma cotação</option>
+                  <option value="sinistro">Aviso de sinistro</option>
+                  <option value="apolice">Dúvida sobre minha apólice</option>
+                  <option value="renovacao">Renovação</option>
+                  <option value="outro">Outro assunto</option>
+                </select>
+                <span class="campo__erro">Escolha um assunto.</span>
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="ct-mensagem">Mensagem</label>
+              <textarea id="ct-mensagem" name="mensagem" required minlength="10" placeholder="Conte com detalhes como podemos ajudar."></textarea>
+              <span class="campo__erro">Escreva sua mensagem (mínimo de 10 caracteres).</span>
+            </div>
+
+            <div class="campo campo--checkbox">
+              <input type="checkbox" id="ct-aceite" name="aceite" required />
+              <label for="ct-aceite">Autorizo o contato e o uso dos meus dados para responder a esta solicitação.</label>
+            </div>
+            <span class="campo__erro" id="erro-aceite-contato">É necessário aceitar para continuar.</span>
+
+            <button type="submit" class="botao botao--solido">Enviar mensagem</button>
+          </form>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h3>Canais de atendimento</h3>
+            <ul class="contato-info">
+              <li>
+                <strong>Central de relacionamento</strong>
+                <a href="tel:08000000000">0800 000 0000</a><br />
+                Seg. a sex., das 8h às 20h
+              </li>
+              <li>
+                <strong>Sinistros e assistência 24h</strong>
+                <a href="tel:08000000001">0800 000 0001</a><br />
+                Todos os dias, inclusive feriados
+              </li>
+              <li>
+                <strong>E-mail</strong>
+                <a href="mailto:contato@protegemais.exemplo">contato@protegemais.exemplo</a>
+              </li>
+              <li>
+                <strong>WhatsApp</strong>
+                (11) 90000-0000
+              </li>
+              <li>
+                <strong>Escritório</strong>
+                Av. Exemplo, 1.000 — 8º andar<br />
+                São Paulo/SP — CEP 00000-000
+              </li>
+            </ul>
+          </div>
+
+          <div class="card" style="margin-top:24px">
+            <h3>Precisa avisar um sinistro agora?</h3>
+            <p>Tenha em mãos o número da apólice, o CPF do segurado e um relato do que aconteceu. O atendimento leva cerca de 10 minutos.</p>
+            <a class="botao botao--solido botao--bloco" href="tel:08000000001">Ligar para o 0800 24h</a>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape__grade">
+        <div>
+          <span class="rodape__logo">◈ ProtegeMais Seguros</span>
+          <p>Corretora de seguros com atendimento digital e consultor dedicado para cada cliente.</p>
+        </div>
+        <div>
+          <h3>Seguros</h3>
+          <ul>
+            <li><a href="index.html#seguros">Auto</a></li>
+            <li><a href="index.html#seguros">Residencial</a></li>
+            <li><a href="index.html#seguros">Vida</a></li>
+            <li><a href="index.html#seguros">Viagem</a></li>
+            <li><a href="index.html#seguros">Empresarial</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Institucional</h3>
+          <ul>
+            <li><a href="sobre.html">Sobre nós</a></li>
+            <li><a href="index.html#como-funciona">Como funciona</a></li>
+            <li><a href="contato.html">Fale conosco</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Atendimento</h3>
+          <ul>
+            <li>0800 000 0000</li>
+            <li><a href="mailto:contato@protegemais.exemplo">contato@protegemais.exemplo</a></li>
+            <li>Seg. a sex., 8h às 20h</li>
+            <li>Sinistros: 24 horas</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rodape__base">
+        <span>© <span id="ano">2026</span> ProtegeMais Seguros. Site de demonstração — empresa fictícia.</span>
+        <span>Dados, telefones e números citados são ilustrativos.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
